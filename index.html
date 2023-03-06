@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
+
+        body {
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+        }
+
+        .nav-bar {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .li {
+            height: 30px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .li a {
+            text-decoration: none;
+            color: rgb(62, 62, 62);
+        }
+
+        .li a:hover {
+            text-decoration: underline;
+        }
+
+        #menu,
+        #user {
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu>img {
+            width: 20px;
+            height: 20px;
+            opacity: .6;
+        }
+
+        #user {
+            padding: 2px;
+        }
+
+        #user>img {
+            width: 35px;
+            height: 35px;
+            opacity: .6;
+        }
+
+        #menu:hover,
+        #user:hover {
+            background: rgba(85, 96, 128, 0.226);
+        }
+
+
+
+        /*  Container */
+
+
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 50px);
+            width: 100%;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 20px 0 40px 0;
+            width: 100%;
+        }
+
+        .logo span {
+            font-size: 100px;
+            font-weight: 500;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        span:nth-child(1),
+        span:nth-child(4) {
+            color: rgb(66, 133, 244);
+        }
+
+        span:nth-child(2),
+        span:nth-child(6) {
+            color: rgb(234, 67, 53);
+        }
+
+        span:nth-child(3) {
+            color: rgb(251, 188, 5);
+        }
+
+        span:nth-child(5) {
+            color: rgb(52, 168, 83);
+        }
+
+        form {
+            height: 100px;
+            width: 500px;
+        }
+
+        .searchbox {
+            height: 50px;
+            width: 500px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(203, 203, 203);
+
+        }
+
+        .searchbox:hover {
+            box-shadow: 0 0 10px rgb(210, 210, 210);
+        }
+
+        .searchbox>img {
+            width: 20px;
+            opacity: .8;
+            margin: 0 10px;
+        }
+
+        .searchbox input {
+            width: calc(500px - 100px);
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+
+        .buttons,
+        .lang {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .buttons>button {
+            height: 33px;
+            border: 1px solid rgba(255, 255, 255, 0);
+            opacity: .8;
+            border-radius: 5px;
+        }
+
+        .buttons>button:hover {
+            opacity: 1;
+            border: 1px solid grey;
+        }
+
+        .lang {
+            height: 20px;
+            align-items: center;
+        }
+
+        .lang p {
+            font-size: 13px;
+            ;
+        }
+
+        .lang p:nth-child(1) {
+            font-size: 14px;
+        }
+
+        .lang p:nth-child(2)>span {
+            color: blue;
+        }
+
+        .lang p:nth-child(2)>:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="li"><a href="https://mail.google.com/mail/u/0/?ogbl#inbox"> Gmail</a></div>
+        <div class="li"><a href="https://www.google.co.in/imghp?hl=en&authuser=0&ogbl"> Images</a></div>
+        <div class="li">
+            <div id="menu">
+                <img src="https://cdn-icons-png.flaticon.com/512/17/17704.png">
+            </div>
+        </div>
+        <div class="li">
+            <div id="user">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="logo">
+            <span>G</span>
+            <span>o</span>
+            <span>o</span>
+            <span>g</span>
+            <span>l</span>
+            <span>e</span>
+        </div>
+
+        <!-- 
+            url ->  https://www.google.com/search?<name of input box> = <value of input box>
+            https:://www.google.com/search?q=value
+        -->
+
+        <form action="https://www.google.com/search">
+            <div class="searchbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149852.png">
+                <input type="text" name="q">
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709950.png">
+                <img src="https://cdn-icons-png.flaticon.com/512/2977/2977238.png">
+            </div>
+            <div class="buttons">
+                <button type="submit">Google Search</button>
+                <button>I'm Feeling Lucky</button>
+            </div>
+            <div class="lang">
+                <p>Google offered in:</p>
+                <p> <span>हिन्दी</span>
+                    <span>বাংলা</span>
+                    <span>తెలుగు</span>
+                    <span>मराठी</span>
+                    <span>தமிழ்</span>
+                    <span>ગુજરાતી</span>
+                    <span>ಕನ್ನಡ</span>
+                    <span>മലയാളം</span>
+                    <span>ਪੰਜਾਬੀ</span>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
