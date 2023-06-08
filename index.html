@@ -93,8 +93,8 @@
         }
 
         .logo span {
-            font-size: 100px;
-            font-weight: 500;
+            font-size: 90px;
+            font-weight: 600;
             font-family: 'Noto Sans', sans-serif;
         }
 
@@ -191,11 +191,11 @@
             cursor: pointer;
         }
 
-        /* _______________________________________________________________ */
-        
+        /* ______________________________ Info/ Description Page _________________________________ */
+
         .info-btn {
             z-index: 1000;
-            position: absolute;
+            position: fixed;
             bottom: 10px;
             right: 10px;
             cursor: pointer;
@@ -212,9 +212,9 @@
         }
 
         .info-disc {
-            position: absolute;
+            position: fixed;
             width: 100%;
-            height: 0%;
+            height: 100vh;
             top: 0;
             right: 0;
             display: flex;
@@ -222,31 +222,104 @@
             align-items: center;
             flex-direction: column;
             color: rgba(157, 255, 229, 0.849);
-            text-transform: capitalize;
+            text-transform: none;
             overflow: hidden;
+            font-family: arial;
         }
 
         .info-heading {
-            font-size: 50px;
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
-            color: rgb(255, 245, 157);
+            color: rgb(252, 0, 0);
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         .info-message {
             font-size: 20px;
-            ;
+            width: 90%;
+            margin: 20px auto;
+            text-align: center;
         }
 
-        .info-message>ul li ul li a {
-            color: rgb(77, 178, 255);
-            text-decoration: none;
+        .website-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        .info-message>ul li ul li a:hover {
-            text-decoration: underline;
+        .website-info h2 {
+            margin-bottom: -10px;
+            color: rgba(255, 245, 157, 0.9);
         }
 
+        .website-info ul {
+            text-align: left;
+        }
+
+        .social-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .social-container h3 {
+            text-align: center;
+            font-size: 35px;
+            color: rgba(255, 245, 157, 0.9);
+            margin-bottom: 10px;
+        }
+
+        #social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        #social-links a img {
+            height: 50px;
+
+        }
+
+        #social-links a img:hover {
+            opacity: 0.8;
+        }
+
+        @media screen and (max-width:600px) {
+            .info-heading {
+                font-size: 25px;
+            }
+
+            .info-disc {
+                overflow: auto;
+            }
+
+            .website-info ul,
+            .info-message {
+                font-size: 15px;
+            }
+
+            .social-container h3,
+            .website-info h2 {
+                font-size: 20px;
+            }
+
+            #social-links {
+                gap: 10px;
+                margin-bottom:20px;
+            }
+
+            #social-links a img {
+                height: 35px;
+            }
+        }
 
         @media screen and (max-width:520px) {
 
@@ -305,7 +378,29 @@
                 margin: 0;
                 text-align: center;
             }
+            .info-heading {
+                font-size: 20px;
+            }
+
+            .website-info ul,
+            .info-message {
+                font-size: 12px;
+            }
+
+            .social-container h3,
+            .website-info h2 {
+                font-size: 15px;
+            }
+
+            #social-links {
+                gap: 8px;
+            }
+
+            #social-links a img {
+                height: 30px;
+            }
         }
+        
 
         @media screen and (max-width:200px) {
             .logo span {
@@ -330,10 +425,15 @@
                 font-size: 10px;
             }
 
+            
             .searchbox {
                 height: 30px;
             }
-
+            .searchbox input {
+                height: 25px;
+                width:85%;
+                margin:auto;
+            }
             .nav-bar {
                 flex-direction: column;
                 justify-content: center;
@@ -343,8 +443,13 @@
             .searchbox>img,
             #menu,
             #user,
-            .li:nth-child(2) {
+            .li:nth-child(2),.info-disc,.info-btn {
                 display: none;
+            }
+        }
+        @media screen and (max-height:600px){
+            .info-disc{
+                overflow: auto;
             }
         }
     </style>
@@ -415,28 +520,50 @@
 
     <div class="info-disc" id="info-discription">
         <div class="info-heading"> Important Information </div>
-        <div class="info-message"> We Don't support any type of piracy or copy of content, This project is just for
-            study purpose and personal use.
+        <div class="info-message"> The purpose of this video is to demonstrate the process of cloning a website for
+            educational and informational purposes only. The techniques and methods discussed in this video are intended
+            to help viewers understand the process of recreating a website.
 
-            <ul>
-                <li> Search Option is in working condition</li>
-                <li> Some Of the Function May not work </li>
-                <li>Website Cloned By Rahul Ji Ara</li>
-                <li>Website Cloned By Rahul Ji Ara</li>
-                <li>Website Cloned By Rahul Ji Ara</li>
-                <li>Important link
-                    <ul>
-                        <li><a href="https://www.github.com/rahuljiara" target="_blank"> Git Hub </a></li>
-                        <li><a href="https://www.freelancer.com/u/rahuljiara" target="_blank"> Freelancer </a></li>
-                        <li><a href="https://www.fiverr.com/rahuljiara" target="_blank"> Fiver </a></li>
-                        <li><a href="https://www.upwork.com/freelancers/~01caf829e4fed0b618" target="_blank"> Upwork
-                            </a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="website-info">
+                <h2> Key Point Of Google Clone Website </h2>
+                <ul>
+                    <li> you can search anything through the search bar </li>
+                    <li> Some Of the function may not work </li>
+                    <li> You might experience some bugs </li>
+                    <li> Website Cloned By :- <b> Rahul Ji Ara </b> for <b> CodeWord Channel </b> In Year <b> 2023 </b> </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="social-container">
+            <h3> Social Links </h3>
+            <div id="social-links">
+                <a href="https://www.github.com/rahuljiara" target="_blank"> <img src="img/github.png" alt="Github">
+                </a>
+                <a href="https://www.youtube.com/@codewordofficial" target="_blank"> <img src="img/youtube.png"
+                        alt="Youtube"> </a>
+                <a href="mailto:officialcodeword07@gmail.com" target="_blank"><img src="img/gmail.png" alt="gmail"> </a>
+            </div>
         </div>
 
     </div>
+
+    <script>
+
+        let infoDisc = document.getElementById("info-discription")
+        infoDisc.style.maxHeight = "0vh"
+        const info = () =>{
+          if(  infoDisc.style.maxHeight == "0vh"){
+            infoDisc.style.maxHeight = "100vh"
+            infoDisc.style.transition = ".3s"
+          }
+          else{
+            infoDisc.style.maxHeight = "0vh"
+            infoDisc.style.transition = ".3s"
+          }
+        }
+
+    </script>
 </body>
 
 </html>
